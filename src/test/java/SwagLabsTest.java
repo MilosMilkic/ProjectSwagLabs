@@ -31,6 +31,11 @@ public class SwagLabsTest extends BaseTest {
         inventoryPage.addBikeLight();
         inventoryPage.addT_Shirt();
         Assert.assertEquals(inventoryPage.getCartNumber(), "3");
+        inventoryPage.clickCart();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+        Assert.assertEquals(cartPage.getInfoOnesie(), "Sauce Labs Onesie");
+        Assert.assertEquals(cartPage.getInfoLight(), "Sauce Labs Bike Light");
+        Assert.assertEquals(cartPage.getInfoTShirt(), "Sauce Labs Bolt T-Shirt");
     }
 
     @Test
@@ -41,7 +46,8 @@ public class SwagLabsTest extends BaseTest {
         inventoryPage.addJacket();
         inventoryPage.clickCart();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
-
+        Assert.assertEquals(cartPage.getInfoBackpack(), "Sauce Labs Backpack");
+        Assert.assertEquals(cartPage.getInfoJacket(), "Sauce Labs Fleece Jacket");
         cartPage.removeBackpack();
         cartPage.removeJacket();
         cartPage.continueShopping();

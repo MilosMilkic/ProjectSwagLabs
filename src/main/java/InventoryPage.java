@@ -18,7 +18,7 @@ public class InventoryPage extends BasePage {
     WebElement productBikeLight;
 
     @FindBy(id = "add-to-cart-sauce-labs-bolt-t-shirt")
-    WebElement productT_Shirt;
+    WebElement productTShirt;
 
     @FindBy(className = "product_sort_container")
     WebElement sortContainer;
@@ -47,9 +47,9 @@ public class InventoryPage extends BasePage {
     {
         productOnesie.click();
     }
-    public void addT_Shirt()
+    public void addTShirt()
     {
-        productT_Shirt.click();
+        productTShirt.click();
     }
     public void addBikeLight()
     {
@@ -66,6 +66,7 @@ public class InventoryPage extends BasePage {
     {
         return  shoppingCart.getText();
     }
+
     public void clickCart()
     {
         shoppingCart.click();

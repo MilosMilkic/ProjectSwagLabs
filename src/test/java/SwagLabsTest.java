@@ -29,7 +29,7 @@ public class SwagLabsTest extends BaseTest {
         inventoryPage.sortProducts();
         inventoryPage.addOnesie();
         inventoryPage.addBikeLight();
-        inventoryPage.addT_Shirt();
+        inventoryPage.addTShirt();
         Assert.assertEquals(inventoryPage.getCartNumber(), "3");
         inventoryPage.clickCart();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
@@ -78,8 +78,8 @@ public class SwagLabsTest extends BaseTest {
         inventoryPage.clickCart();
         cartPage.clickCheckout();
         checkoutStepOnePage.inputForm("Miki", "Misko", "11000");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-two.html");
         checkoutStepTwoPage.clickFinish();
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
         Assert.assertEquals(checkoutStepTwoPage.getInfoMessage(),"Thank you for your order!");
     }
 

@@ -15,7 +15,6 @@ public class FinishShoppingTest extends BaseTest {
         checkoutStepOnePage.clickContinue();
         checkoutStepTwoPage.clickFinish();
         Assert.assertEquals(checkoutStepTwoPage.getInfoMessage(),"Thank you for your order!");
+
     }
-
 }
-

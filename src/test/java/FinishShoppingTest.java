@@ -17,5 +17,4 @@ public class FinishShoppingTest extends BaseTest {
         Assert.assertEquals(checkoutStepTwoPage.getInfoMessage(),"Thank you for your order!");
 
     }
-
 }

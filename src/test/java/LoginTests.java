@@ -46,5 +46,4 @@ public class LoginTests extends BaseTest{
         loginPage.clickLogin();
         Assert.assertTrue(loginPage.loginErrorMess.isDisplayed(), "Epic sadface: Username is required");
     }
-
 }

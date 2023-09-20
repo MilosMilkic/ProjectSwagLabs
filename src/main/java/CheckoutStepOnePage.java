@@ -27,6 +27,6 @@ public class CheckoutStepOnePage extends  BasePage {
         firstName.sendKeys(name);
         lastName.sendKeys(last);
         postalCode.sendKeys(zipCode);
-        continueButton.click();
     }
+    public void clickContinue(){continueButton.click();}
 }
